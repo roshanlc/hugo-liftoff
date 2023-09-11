@@ -8,6 +8,7 @@
   justify-content: space-between;
   padding: 15px 0;
   row-gap: 20px;
+  margin-top: 3px;
 
   .nav-toggle {
     position: absolute;
@@ -16,7 +17,7 @@
     cursor: pointer;
   }
 
-  @include respond-to('m-large') {
+  @include respond-to("m-large") {
     flex-direction: row; /* Horizontal nav on desktop */
     align-items: center;
     padding: 0;
@@ -28,7 +29,7 @@
 }
 
 .logo {
-  @include font-size('md');
+  @include font-size("md");
   font-weight: 700;
   text-decoration: none;
   width: fit-content;
@@ -88,17 +89,17 @@
     margin-left: 10px;
   }
 
-  @include respond-to('m-large') {
+  @include respond-to("m-large") {
     display: flex;
     flex-direction: row;
     border: none;
 
     .menu-item:hover {
-      .sub-menu {        
+      .sub-menu {
         background-color: var(--color-contrast-lower);
         padding-left: 0;
         display: block;
-        z-index: 1;        
+        z-index: 1;
       }
     }
   }
@@ -116,10 +117,11 @@
     font-weight: initial;
   }
 
-  @include respond-to('m-large') {
+  @include respond-to("m-large") {
     display: none;
     position: absolute;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
     &--active {
       display: none;

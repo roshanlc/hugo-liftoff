@@ -5,9 +5,9 @@
 /**
  * Clear inner floats
  */
- .clearfix::after {
+.clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -25,11 +25,11 @@
   padding-right: 16px; /* 3 */
   width: 100%; /* 1 */
 
-  @include respond-to('small') {
+  @include respond-to("small") {
     padding-left: 20px; /* 3 */
     padding-right: 20px; /* 3 */
   }
-  
+
   &--sm {
     @extend .container;
     max-width: 768px;
@@ -65,5 +65,5 @@
 }
 
 .section {
-  padding: 50px 0;
+  padding: 5px 0;
 }
