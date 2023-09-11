@@ -15,7 +15,7 @@
         {{ with .Params.secondary_cta_page }}
           {{ $s_cta = . }}
         {{ end }}
-        <a class="btn-primary"
+        <a class="btn-secondary"
            href="{{ with $p_cta }}{{ . | relURL }}{{ else }}{{ "about" | relURL }}{{ end }}">
            {{ if $p_cta }}{{ with .Site.GetPage $p_cta }}{{ .LinkTitle }}{{ end }}{{ else }}About{{ end }}
         </a>
@@ -23,6 +23,7 @@
            href="{{ with $s_cta }}{{ . | relURL }}{{ else }}{{ "projects" | relURL }}{{ end }}">
            {{ if $s_cta }}{{ with .Site.GetPage $s_cta }}{{ .LinkTitle }}{{ end }}{{ else }}Projects{{ end }}
         </a>
+        <a href="{{.Site.Params.resume_url}}" class="btn-secondary">Resume</a>
       </div>
     </div>
     <div class="hero-owner">
